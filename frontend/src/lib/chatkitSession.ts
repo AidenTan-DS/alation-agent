@@ -11,7 +11,8 @@ export const workflowId = (() => {
 
 export function createClientSecretFetcher(
   workflow: string,
-  endpoint = "/api/create-session"
+  endpoint = "https://alation-backend.onrender.com/api/create-session"
+
 ) {
   return async (currentSecret: string | null) => {
     if (currentSecret) return currentSecret;
